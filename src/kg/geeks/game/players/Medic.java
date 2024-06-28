@@ -13,7 +13,7 @@ public class Medic extends Hero  {
     @Override
     public void applySuperPower(Boss boss, Hero[] heroes) {
         for (Hero hero : heroes) {
-            if (this.getHealth() > 0 && hero.getHealth() < 100 && !hero.equals(this)) {
+            if (hero.getHealth() > 0 && hero.getHealth() < 100 && !hero.equals(this)) {
                 int healPoints = random.nextInt(30) + 10;
                 hero.setHealth(hero.getHealth() + healPoints);
                 System.out.println(this.getName() + " heals " + hero.getName()  + " for " + healPoints + " health.");
